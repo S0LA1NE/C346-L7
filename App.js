@@ -54,6 +54,13 @@ export default function App() {
             <Text style={ [styles.Child, {backgroundColor: "steelblue", height: 50}] }>Child Three</Text>
             {/*           ^ use array,   ^ curly bracket  */}
         </View>
+
+        <View style={ [styles.parent, {height: 500}] }>
+            <Text style={ [styles.child, {backgroundColor: "skyblue"}, styles.boxText] }>Square 1</Text>
+            <Text style={ [styles.child, {backgroundColor: "green"}, styles.boxText] }>Square 2</Text>
+            <Text style={ [styles.child, {backgroundColor: "red"}, styles.boxText] }>Square 3</Text>
+            {/*           ^ use array,   ^ curly bracket  */}
+        </View>
         <StatusBar style="auto" />
     </ScrollView>
   );
@@ -97,5 +104,20 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         textAlign: 'center',
         fontSize: 24,
+    },
+    parent:{
+        backgroundColor: 'whitesmoke',
+        marginTop: 30,
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: "space-around",
+        alignItems: 'center', // vertical centering
+    },
+    child: {
+        width: 80,
+        height: 80,
+        color: "white",
+        textAlign: "center",
+        textAlignVertical: "center"
     }
 });
